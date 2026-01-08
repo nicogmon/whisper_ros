@@ -49,7 +49,7 @@ def generate_launch_description():
                         "frame_size_ms": LaunchConfiguration("frame_size_ms", default=32),
                         "threshold": LaunchConfiguration("threshold", default=0.5),
                         "min_silence_ms": LaunchConfiguration(
-                            "min_silence_ms", default=128
+                            "min_silence_ms", default=500
                         ),
                         "speech_pad_ms": LaunchConfiguration("speech_pad_ms", default=32),
                         "use_cuda": LaunchConfiguration("use_cuda", default=False),

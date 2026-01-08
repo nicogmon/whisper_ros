@@ -45,13 +45,13 @@ def generate_launch_description():
         ),
         "model_repo": LaunchConfiguration("model_repo", default="ggerganov/whisper.cpp"),
         "model_filename": LaunchConfiguration(
-            "model_filename", default="ggml-large-v3-turbo-q5_0.bin"
+            "model_filename", default="ggml-medium-q5_0.bin"
         ),
         "model_path": LaunchConfiguration("model_path", default=""),
         "openvino_encode_device": LaunchConfiguration(
             "openvino_encode_device", default="CPU"
         ),
-        "n_threads": LaunchConfiguration("n_threads", default=4),
+        "n_threads": LaunchConfiguration("n_threads", default=8),
         "n_max_text_ctx": LaunchConfiguration("n_max_text_ctx", default=16384),
         "offset_ms": LaunchConfiguration("offset_ms", default=0),
         "duration_ms": LaunchConfiguration("duration_ms", default=0),
