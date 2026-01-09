@@ -133,6 +133,7 @@ def generate_launch_description():
                 executable="whisper_server_node",
                 name="whisper_node",
                 namespace="whisper",
+                respawn=True,
                 parameters=[whisper_params],
                 condition=UnlessCondition(
                     PythonExpression([LaunchConfiguration("stream")])
@@ -143,6 +144,7 @@ def generate_launch_description():
                 executable="whisper_node",
                 name="whisper_node",
                 namespace="whisper",
+                respawn=True,
                 parameters=[whisper_params],
                 condition=IfCondition(PythonExpression([LaunchConfiguration("stream")])),
             ),
@@ -170,6 +172,7 @@ def generate_launch_description():
                 executable="audio_capturer_node",
                 name="capturer_node",
                 namespace="audio",
+                respawn=True,
                 parameters=[
                     {
                         "format": LaunchConfiguration("format", default=1),

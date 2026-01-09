@@ -35,6 +35,7 @@ def generate_launch_description():
                 executable="silero_vad_node",
                 name="silero_vad_node",
                 namespace="whisper",
+                respawn=True,
                 parameters=[
                     {
                         "enabled": LaunchConfiguration("enabled", default=True),
